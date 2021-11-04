@@ -54,14 +54,14 @@ class PostsList extends React.Component {
         <div>
           <GridContainer>
             {
-              this.state.posts.slice(0, this.state.visible).map((post, i) => {
+              posts.slice(0, this.state.visible).map((post, i) => {
                return (
                   <PostCard key={i}
-                  //id={posts[i].id}
-                  date={posts[i].date} 
-                  fbimg={posts[i].fbimg} 
-                  description={posts[i].description} 
-                  fbpost={posts[i].fbpost}
+                  id={post.id}
+                  date={post.date} 
+                  fbimg={post.fbimg} 
+                  description={post.description} 
+                  fbpost={post.fbpost}
                   />
                 );
               })
